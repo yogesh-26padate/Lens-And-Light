@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Lens & Light</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+    <div class="container mt-5" style="max-width: 600px;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text-gold">Admin Dashboard</h2>
+            <a href="index.html" class="text-secondary text-decoration-none">Back Home</a>
+        </div>
+        
+        <div class="card p-4">
+            <h4 class="text-white mb-4">Add New Post</h4>
+            
+            <form id="blogForm">
+                <div class="mb-3">
+                    <label class="form-label text-secondary">Title</label>
+                    <input type="text" id="title" class="form-control" placeholder="e.g. Sunset in Bali" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-secondary">Image URL</label>
+                    <input type="url" id="imageUrl" class="form-control" placeholder="https://source.unsplash.com/random" required>
+                    <div class="form-text text-secondary">Tip: Use <b>https://source.unsplash.com/random</b> for a test image.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-secondary">Category</label>
+                    <select id="category" class="form-control">
+                        <option>Weddings</option>
+                        <option>Portraits</option>
+                        <option>Nature</option>
+                        <option>Events</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-secondary">Description</label>
+                    <textarea id="desc" class="form-control" rows="3" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-gold w-100">Publish to Website</button>
+            </form>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="blog.html" class="btn btn-outline-light">Check Blog Page &rarr;</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

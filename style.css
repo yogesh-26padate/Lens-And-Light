@@ -1,0 +1,164 @@
+/* --- GLOBAL STYLES --- */
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+.bg-black { background-color: #000 !important; }
+.text-gold { color: #d4af37; }
+.text-secondary { color: #b0b0b0 !important; }
+
+/* --- NAVBAR --- */
+.navbar {
+    transition: all 0.3s ease;
+    padding: 15px 0;
+    z-index: 1000;
+}
+.navbar.shadow {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.logo {
+    color: #d4af37 !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.nav-link {
+    font-size: 1rem;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active { color: #d4af37 !important; }
+
+/* --- BUTTONS --- */
+.btn-gold {
+    background-color: #d4af37;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.btn-gold:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+.btn-outline-light {
+    border-radius: 50px;
+    padding: 10px 25px;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: radial-gradient(circle at 70% 50%, #222 0%, #000 70%);
+    display: flex;
+    align-items: center;
+}
+.hero-img {
+    max-height: 85vh;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.8));
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* --- CARDS & GALLERY --- */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+.gallery-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.gallery-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.gallery-card:hover img { transform: scale(1.05); }
+.overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    width: 100%;
+    padding: 20px;
+}
+
+/* --- CONTACT FORM --- */
+.contact-section {
+    position: relative;
+    padding: 80px 0;
+}
+.contact-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.form-control {
+    background-color: #222;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 12px;
+}
+.form-control:focus {
+    background-color: #333;
+    border-color: #d4af37;
+    color: #fff;
+    box-shadow: none;
+}
+.contact-icon-box {
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    margin-right: 15px;
+}
+/* --- MOBILE NAVBAR IMPROVEMENTS --- */
+@media (max-width: 991px) {
+    /* Solid black background when menu is open on mobile */
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+        border-bottom: 1px solid #333;
+        position: absolute; /* Detaches menu so it doesn't push content down */
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    /* Center text and add spacing for touch targets */
+    .navbar-nav .nav-link {
+        margin-left: 0; /* Reset desktop margin */
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle divider */
+        padding-bottom: 10px;
+    }
+
+    /* Remove border from the last item */
+    .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
